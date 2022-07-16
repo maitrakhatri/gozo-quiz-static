@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gozo Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar bg-text-gray">
+        <div class="navbar-header">
+            <p class="navbar-header-title text-l text-yellow">gozo Quiz</p></a>
+        </div>
+        <div class="navbar-links">
+            <a href=""><img src="./assets/github.png" alt="GitHub Repo Link"></a>
+        </div>
+    </nav>
+
+    <main id="homepage">
+
+        <div class="typewriter">
+            <p class="heading text-xl"> Aa dekhe zara, kisme kitna hai dum !!</p>
+        </div>
+
+        <div class="all-quizes">
+            <div class="card card-with-image shadow">
+                <div class="card-img">
+                    <img class="img-res" src="./assets/superheroes.jpg" alt="card image">
+                </div>
+                <div class="card-title text-center">
+                    Superheroes
+                </div>
+            </div>
+            <div class="card card-with-image shadow">
+                <div class="card-img">
+                    <img class="img-res" src="./assets/books.jpg" alt="card image">
+                </div>
+                <div class="card-title text-center">
+                    Books
+                </div>
+            </div>
+            <div class="card card-with-image shadow">
+                <div class="card-img">
+                    <img class="img-res" src="./assets/movies.jpg" alt="card image">
+                </div>
+                <div class="card-title text-center">
+                    Movies
+                </div>
+            </div>
+            <div class="card card-with-image shadow">
+                <div class="card-img">
+                    <img class="img-res" src="./assets/computers.jpg" alt="card image">
+                </div>
+                <div class="card-title text-center">
+                    Computers
+                </div>
+            </div>
+            <div class="card card-with-image shadow">
+                <div class="card-img">
+                    <img class="img-res" src="./assets/anime.jpg" alt="card image">
+                </div>
+                <div class="card-title text-center">
+                    Anime and Manga
+                </div>
+            </div>
+        </div>
+
+        <div class="modal hide">
+            <div class="difficulty">
+                <img src="./assets/close.png" alt="close" id="close">
+                <p>For this genre select difficulty level : </p>
+                <a href="/rules.html"><button class="btn btn-hover btn-outline-yellow">Easy</button> </a>
+                <a href="/rules.html"><button class="btn btn-hover btn-outline-yellow">Medium</button></a>
+                <a href="/rules.html"><button class="btn btn-hover btn-outline-yellow">Hard</button></a>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+<script>
+    const modal = document.querySelector(".modal")
+    const openModal = document.querySelectorAll(".card")
+    const closeModal = document.querySelector("#close")
+
+    openModal.forEach(item => {
+        item.addEventListener("click", () => {
+            modal.classList.remove("hide")
+        })
+    })
+
+    closeModal.addEventListener("click", () => {
+        modal.classList.add("hide")
+    })
+
+</script>
+
+</html>
